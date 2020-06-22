@@ -1,0 +1,117 @@
+
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>line-clamp</title>
+    <style>
+        .shareBox .shareState .item{
+            width: 291px;
+            height: 157px;
+            border: 1px solid #dfdfdf;
+            padding: 0px 10px 10px;
+        }
+        p{
+            margin: 0px;
+            margin-top: 10px;
+        }
+        p.name{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .line-clamp{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+		
+		
+		#box p{
+			height: 1rem;
+			width: 3rem;
+			background: red;
+		}
+    </style>
+</head>
+<body>
+ 
+<div>
+    <!--动态渲染数据-->
+    <div class="shareBox">
+        <!--分享-->
+        <div class="shareState">
+            <div class="item"> 
+                <p class="name">面朝大海,春暖花开</p>
+                <p class="line-clamp">
+                    从明天起，做一个幸福的人 喂马、劈柴，周游世界                
+                    从明天起，关心粮食和蔬菜 我有一所房子，面朝大海，春暖花开                               
+                    从明天起，和每一个亲人通信 告诉他们我的幸福  那幸福的闪电告诉我的
+                    我将告诉每一个人 给每一条河每一座山取一个温暖的名字 陌生人，我也为你祝福 愿你有一个灿烂的前程 愿你有情人终成眷属 愿你在尘世获得幸福      
+                </p>
+            </div>
+			<img alt="图片加载失败" title="这是一张图片" src="" >
+			
+        </div>
+    </div>
+	<div id="box">
+		
+	</div>
+	
+</div>
+<script type="text/javascript">
+	
+	
+	function f1(){
+		console.log($("#box p"));
+		console.log($(".p1"));
+		
+		$("#box p").click(function(){
+			alert(1111)
+		})
+		
+		console.log(11212)
+	}
+		
+		
+	
+	var str = "https://www.fastmock.site/mock/b913cbff8c8b9e4941f3aba8758f0849/goods/api/goods_list";
+	
+	
+	var ajax1 = $.get(str,data=>{
+		console.log(data)
+	})
+	
+	var ajax2 = $.get(str,data=>{
+		console.log(data)
+		console.log("我是ajax2")
+	})
+	
+	// 异步加载执行
+	$.when(ajax1,ajax2).done(function(){
+		f1();
+		console.log("我是异步加载后执行的")
+	})
+	
+	
+	
+	//事件委托
+	$("#box").on("click","p",function(){
+		alert(11111)
+	})
+	
+	
+	var p = `<p class="p1">哈哈哈</p>`
+	$("#box").html(p);
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

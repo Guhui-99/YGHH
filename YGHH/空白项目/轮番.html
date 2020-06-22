@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="asset/css/framework.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="asset/css/pagecss.css"/>
+		<script src="asset/js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/changePX.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/easyJs.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.notice{
+				background: white;
+				height: .8rem;
+				padding: 0 .3rem;
+			}
+			 
+			.notice_left svg{
+				margin-right: .15rem;
+				width: .36rem;
+				height: .36rem;
+				fill: #00a2e9;
+				margin-right: .1rem;
+			}
+			
+			.notice_left{
+				width: 1.3rem;
+			}
+			
+			.notice_left span{
+				font-weight: bold;
+			}
+			
+			.notic_right{
+				height: .8rem;
+				width: calc(100% - 1.5rem);
+				overflow: hidden;
+			}
+			
+			.new_list{
+				height: 100%;
+				padding-left: .25rem;
+			}
+			
+			.new_list_cont{
+				transition: margin-top .25s;
+			}
+			
+			.new_list div{
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ui-pane">
+			<div class="nav"></div>
+			<div class="ui-header">
+				<a href="" class="header-button">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-left"></use>
+					</svg>
+				</a>
+				<div class="header-title">页面标题</div>
+			</div>
+			<div class="ui-content">
+				<div class="notice flex-star">
+					<div class="notice_left flex-star">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-laba"></use>
+						</svg>
+						<span>公告</span>
+					</div>
+					<div class="notic_right">
+						<div class="new_list_cont">
+							<div class="new_list flex-star">
+								<div>
+									我有一颗小虎牙我有一颗小虎牙我有一颗小虎牙我有一颗小虎牙我有一颗小虎牙
+								</div>
+							</div>
+							<div class="new_list flex-star">
+								<div>我有两颗小虎牙</div>
+							</div>
+							<div class="new_list flex-star">
+								<div>我有三颗小虎牙</div>
+							</div>
+							<div class="new_list flex-star">
+								<div>我有四颗小虎牙</div>
+							</div>
+							<div class="new_list flex-star">
+								<div>我有五颗小虎牙</div>
+							</div>
+							<div class="new_list flex-star">
+								<div>我有六颗小虎牙</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		localScroll($(".new_list_cont"),$(".new_list").length,$(".new_list").height(),2,200);
+		
+	</script>
+</html>

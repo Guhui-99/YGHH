@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin:0;
+			}
+			#cont{
+				width: 400px;
+				height: 200px;
+				background: red;
+				position: relative;
+			}
+			
+			#box{
+				width: 50px;
+				height: 50px;
+				cursor: pointer;
+				background: yellow;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="cont">
+			<div id="box"></div>
+		</div>
+		
+		<select>
+			<option value="">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+			<option value="">4</option>
+		</select>
+		
+		<input type="text" name="" id="input" value="dfsfsdfsdfsdf" />
+		
+	</body>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var ele = document.getElementsByTagName("select")[0];
+		ele.onchange = function(){
+			console.log(ele.selectedIndex);
+			console.log($(ele).get(0).selectedIndex)
+		}
+		
+		document.getElementById("input").selectionStart   = function(){
+			console.log(1111)
+		}
+		
+		$("#input").select(function(){
+			console.log(1111111)
+		})
+		
+		console.log(screen.height,screen.width);
+		console.log(screen.availHeight,screen.availWidth);
+		
+		
+		
+		// var result = prompt("能告诉你叫什么吗?" ,"火柴");
+		// if(result != null){
+		// 	if(result == '火柴'){
+		// 		alert('火柴是我的名字哦');
+		// 	}else{
+		// 		alert("欢迎你,"+result); 
+		// 	}
+		// }else{
+		// 	alert('好吧，欢迎你，匿名。我以前一直以为匿名是个作家的名字');
+		// }
+	
+		
+		var box = document.getElementById('box');
+		var cont = document.getElementById('cont');
+		box.onmousedown = function(ev){
+			var e = ev || event;
+			var x = e.clientX - this.offsetLeft;
+			console.log(x)
+			var y = e.clientY - this.offsetTop;
+			document.onmousemove = function(e){
+				var ev = e || event;
+				
+				var L = ev.clientX - x;
+				if(L < 0){
+					L = 0
+				}else if(L > cont.offsetWidth - box.offsetWidth){
+					L = cont.offsetWidth - box.offsetWidth
+				}
+				
+				var T = ev.clientY - y;
+				if(T < 0){
+					T = 0
+				}else if(T > cont.offsetHeight - box.offsetHeight){
+					T = cont.offsetHeight - box.offsetHeight
+				}
+				
+				box.style.left = L + 'px';
+				box.style.top = T + 'px';
+			}
+			document.onmouseup = function(){
+				document.onmousedown = null;
+				document.onmousemove = null;
+			}
+		}
+	</script>
+</html>

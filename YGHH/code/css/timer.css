@@ -1,0 +1,83 @@
+.timer_box{
+	overflow-x: scroll;
+	padding: 10px 0;
+	display: flex;
+	height: 350px;
+	border: 1px #aaa solid;
+	position: relative;
+	background: url(../img/zhou.jpg) no-repeat 25px 50%;
+	background-size: 100% 5px;
+	padding-left: 100px;
+	text-align: center;
+	font-family: "微软雅黑";
+	color: #555;
+}
+
+.timer_box:after{
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #e51f46;
+	position: absolute;
+	left: 20px;
+	top: calc(50% - 10px);
+}
+
+.timer_box::-webkit-scrollbar{
+	display: none;
+}
+
+.timer_item{
+	width: 300px;
+	position: relative;
+	background: url(../img/shu.jpg) 50% 80px no-repeat;
+	padding-top: 30px;
+}
+
+.timer_item:before{
+	content: "";
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	position: absolute;
+	background: #ada9ac;
+	top: 80px;
+	left: calc(50% - 5px);
+}
+
+.item_title{
+	color: #e2244a;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+.timer_box div.timer_item:nth-child(2n){
+	transform: rotate(180deg);
+}
+
+.timer_box div.timer_item:nth-child(2n)>*{
+	transform: rotate(180deg);
+}
+
+.item_time{
+	position: absolute;
+	background: white;
+	height: 50px;
+	width: 90px;
+	top: calc(50% - 25px);
+	left: calc(50% - 45px);
+}
+
+.item_img{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 40px);
+}
+
+1 2 45 78 
+3 69

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var moban = "尊敬的{0}你好";
+		var str="13278707928,13278907928,13278807928";
+		
+		str.split(",").forEach(item=>{
+			console.log(moban.replace("{0}",item))
+		})
+		
+		var str="13278707928";
+		function mosaic(str,start,length){
+			let startString = str.substring(0,start);
+			let mosaicString = "*".repeat(length);
+			let endString = str.substring(start + length);
+			return startString + mosaicString + endString;
+		}
+		
+		console.log(mosaic(str,4,3))
+		
+		
+	</script>
+</html>

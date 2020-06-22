@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var setTime = function(date){
+			var leftd = Math.floor(date / (24 * 60 * 60) % 24);
+			if(leftd < 10){
+				leftd = "0" + leftd;
+			}
+			lefth = Math.floor(date / ( 60 * 60) % 24); //计算小时数
+			if(lefth < 10){
+				lefth = "0" + lefth;
+			}
+			leftm = Math.floor(date / (60) % 60 );  //计算分钟数
+			if(leftm < 10){
+				leftm = "0" + leftm;
+			}
+			lefts = Math.floor(date % 60);  //计算秒数
+			if(lefts < 10){
+				lefts = "0" + lefts;
+			}
+			return leftd + "天" + lefth + ":" + leftm + ":" + lefts;
+		}
+		 
+		var countdown = function(date,dom){
+			var interval = setInterval(function(){
+				console.log(setTime(date));
+				$(dom).text(setTime(date));
+				date--;
+				if(date < 0){
+					clearInterval(interval)
+				}
+			},1000)
+		}
+		countdown(40000,".bil");
+	</script>
+	
+</html>

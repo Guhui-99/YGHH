@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function calWeekday(day){
+			return "星期" + "日一二三四五六"[day]
+		}
+		
+		console.log(calWeekday((new Date()).getDay()));
+		
+		function addZreo(val){
+			return val < 10 ? "0" + val : val;
+		}
+		
+		console.log(addZreo(9))
+	</script>
+</html>

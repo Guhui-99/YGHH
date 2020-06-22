@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<style type="text/css">
+		   .wrapper {position: relative;}
+		   #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+		</style>
+		
+		<div class="wrapper">
+		   <p id="text">我爸真了解我@天天 @米娜爷爷   #老外 #搞笑 #青春的逆行 https://v.douyin.com/J1pymqr/ 复制此链接，打开【抖音短视频】，直接观看视频！</p>
+		   <textarea id="input">这是幕后黑手</textarea>
+		   <button>copy</button>
+		</div>
+		
+		<a href="snssdk1128://">斤斤计较军军</a>
+		
+	</body>
+	<script type="text/javascript">
+		 // function copyText() {
+		 //      var text = document.getElementById("text").innerText;
+		 //      var input = document.getElementById("input");
+		 //      input.value = text; // 修改文本框的内容
+		 //      input.select(); // 选中文本
+		 //      document.execCommand("copy"); // 执行浏览器复制命令
+		 //      alert("复制成功");
+		 //    }
+		 
+		 
+		 
+		 function copyText(textEle,inputEle) {
+		      inputEle.val(textEle.text()); // 修改文本框的内容
+		      inputEle.select(); // 选中文本
+		      document.execCommand("copy"); // 执行浏览器复制命令
+		      alert("复制成功");
+		    }
+			
+			$("button").click(function(){
+				copyText($("#text"),$("#input"))
+			})
+	</script>
+</html>

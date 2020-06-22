@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../daily/js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.container{
+				width: 100vw;
+				height: 100vh;
+				background: #555555;
+				position: relative;
+			}
+			.plane{
+				width: 80px;
+				height: 60px;
+				background: red;
+				position: absolute;
+				bottom: 0;
+				left: calc(50% - 40px);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="plane"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function calcPosition(left,top,maxleft,maxtop){
+			if(left > maxleft) left = maxleft;
+			if(top > maxtop) top = maxtop;
+			if(left < 0) left = 0;
+			if(top < 0) top = 0;
+			return{
+				left,top
+			}
+		}
+		
+		
+		$(window).keydown(function(e){
+			console.log(e.keyCode);
+			var t = $(".plane").position().top;
+			var l = $(".plane").position().left;
+			switch(e.keyCode){
+				case 38:
+					t -= 10;
+					break;
+				case 40:
+					t += 10;
+					break;
+				case 37:
+					l -= 10;
+					break;
+				case 39:
+					l += 10;
+					break;
+			}
+			
+			var maxleft = $(".container").innerWidth() - $(".plane").innerWidth();
+			var maxtop = $(".container").innerHeight() - $(".plane").innerHeight();
+			var position = calcPosition(l,t,maxleft,maxtop);
+			$(".plane").css("left",position.left).css("top",position.top);
+			
+		})
+	</script>
+</html>

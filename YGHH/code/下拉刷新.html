@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				height: 100%;
+			}
+			.heard{
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 50px;
+				background: cadetblue;
+				width: 100%;
+				line-height: 50px;
+				color: white;
+				text-align: center;
+			}
+			
+			.container{
+				min-height: 100%;
+				background: darkcyan;
+				width: 100%;
+			}
+			
+			.pull{
+				background: salmon;
+				margin-top: 50px;
+				display: none;
+				align-items: flex-end;
+				line-height: 50px;
+				text-align: center;
+				justify-content: center;
+				-webkit-user-select:none;
+				-moz-user-select:none;
+				-ms-user-select:none;
+				user-select:none;
+				resize: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="heard"></div>
+		<div class="pull">
+			下拉刷新...
+		</div>
+		<div class="container"></div>
+	</body>
+	<script type="text/javascript">
+		var cont = document.getElementsByClassName('container')[0];
+		cont.onmousedown = function(e){
+			var y = e.clientY;
+			document.onmousemove = function(ev){
+				document.getElementsByClassName('pull')[0].style.display = 'flex';
+				var y1 = ev.clientY;
+				var h = y1 - y;
+				document.getElementsByClassName('pull')[0].style.height = h + 'px';
+				if(h < 50){
+					document.getElementsByClassName('pull')[0].innerText = '下拉刷新...'
+				}
+				if(h > 50){
+					document.getElementsByClassName('pull')[0].innerText = '松开刷新...'
+				}
+			}
+			document.onmouseup = function(){
+				document.getElementsByClassName('pull')[0].style.height = 50 + 'px';
+				document.getElementsByClassName('pull')[0].innerText = '正在刷新...';
+				setTimeout(function(){
+					window.history.go(-1);
+				},0);
+				cont.onmousedown = null;
+				document.onmousemove = null;
+			}
+		}
+	</script>
+</html>

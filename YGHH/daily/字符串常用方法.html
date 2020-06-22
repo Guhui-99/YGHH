@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		// 1.charAt() 方法从一个字符串中返回指定的字符。
+		{
+			let str = "asdfhjk";
+			console.log(str.charAt(0))//a
+		}
+				
+		// 2.charCodeAt() 方法返回0到65535之间的整数，
+		// 表示给定索引处的UTF-16代码单元 (在 Unicode 
+		// 编码单元表示一个单一的 UTF-16 编码单元的情况下，
+		// UTF-16 编码单元匹配 Unicode 编码单元。但在——例如 Unicode
+		//  编码单元 > 0x10000 的这种——不能被一个 UTF-16 编码单元单独表示的情况下，
+		//  只能匹配 Unicode 代理对的第一个编码单元) 。
+		//  如果你想要整个代码点的值，使用 codePointAt()。
+		{
+			let str = "asdfhjk";
+			console.log(str.charCodeAt(0))//97(a的Unicode编码)
+		}
+		
+		// 3.concat() 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。
+		{
+			let str = "asdfhjk";
+			let str2 = "qwert"
+			console.log(str.concat(str2))//asdfhjkqwert
+			console.log(str.concat(str2,"我系渣渣辉"))//asdfhjkqwert我系渣渣辉(支持多个字符串)
+		}
+		
+		// 4.endsWith()方法用来判断当前字符串是否是以另外
+		// 一个给定的子字符串“结尾”的，根据判断结果返回 true 或 false。
+		{
+			const str1 = 'Cats are the best!';
+			console.log(str1.endsWith('best', 17));//true
+		}
+		
+		// 5.includes() 方法用于判断一个字符串是否包含在另一个字符串中，根据情况返回 true 或 false。
+		{
+			let str = 'To be, or not to be, that is the question.';
+			console.log(str.includes('To be'));//true
+		}
+		
+		// 6.indexOf() 方法返回调用它的 String 对象中第一次出现的指定值的索引，
+		// 从 fromIndex 处进行搜索。如果未找到该值，则返回 -1。
+		// lastIndexOf() 方法返回调用String 对象的指定值最后一次出现的索引，
+		// 在一个字符串中的指定位置 fromIndex处从后向前搜索。如果没找到这个特定值则返回-1 。
+		{
+			let str = "asdfhjkasdfjjjj";
+			console.log(str.indexOf("j"))//5
+			console.log(str.indexOf("5"))//-1
+			console.log(str.lastIndexOf("j"));//14
+			console.log(str.lastIndexOf("888"));//-1
+		}
+		
+		// 7.match() 方法检索返回一个字符串匹配正则表达式的的结果。
+		// matchAll() 方法返回一个包含所有匹配正则表达式的结果及分组捕获组的迭代器。
+		{
+			
+		}
+		
+		// 8.repeat() 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
+		{
+			// "abc".repeat(-1)     // RangeError: repeat count must be positive and less than inifinity
+			"abc".repeat(0)      // ""
+			"abc".repeat(1)      // "abc"
+			"abc".repeat(2)      // "abcabc"
+			"abc".repeat(3.5)    // "abcabcabc" 参数count将会被自动转换成整数.
+			// "abc".repeat(1/0)    // RangeError: repeat count must be positive and less than inifinity
+		}
+		
+		// 9.replace() 方法返回一个由替换值（replacement）替换一些或所有匹配的模式（pattern）后的新字符串。
+		// 模式可以是一个字符串或者一个正则表达式，
+		// 替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。
+		{
+			let str = "我是一颗小虎牙";
+			console.log(str.replace("我","你"));
+		}
+		
+		// 10.slice() 方法提取某个字符串的一部分，并返回一个新的字符串，且不会改动原字符串。
+		{
+			let str = "我系渣渣辉，你系古天乐";
+			console.log(str.slice(5));//，你系古天乐(一个参数截取指定到最末尾)
+			console.log(str.slice(2,8));//渣渣辉，你系
+			console.log(str.slice(-5));//你系古天乐(负数表示从末尾开始截取)
+		}
+		
+		// 11.split() 方法使用指定的分隔符字符串将一个String对象分割成子字符串数组，
+		// 以一个指定的分割字串来决定每个拆分的位置。 
+		{
+			let str = "1,2,3,4,5,6,7";
+			console.log(str.split(","));//(7) ["1", "2", "3", "4", "5", "6", "7"]
+			console.log(str.split(",",2));//(2) ["1", "2"]
+			console.log(str.slice("5",6));
+			
+		}
+		
+		// 12.startsWith() 方法用来判断当前字符串是否以另外一个给定的子字符串开头，
+		// 并根据判断结果返回 true 或 false。
+		{
+			let str = "To be, or not to be, that is the question.";
+			console.log(str.startsWith("To be"));         // true
+			console.log(str.startsWith("not to be"));     // false
+			console.log(str.startsWith("not to be", 10)); // true
+		}
+		
+		// 13.toString() 方法返回指定对象的字符串形式。
+		
+		// 14.toUpperCase()  方法返回一个将调用字符串转换为大写形式的值。（如果这个值不是字符串则会被变成字符串）
+		{
+			let str = "asdfgh456w张一山";
+			let str1 = true;
+			console.log(str.toUpperCase());//ASDFGH
+			//console.log(str1.toUpperCase());//Uncaught TypeError: str1.toUpperCase is not a function
+		}
+		
+		// 15.trim() 方法会从一个字符串的两端删除空白字符。
+		// 在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 
+		// 以及所有行终止符字符（如 LF，CR等）。
+		
+		// trimStart() 方法从字符串的开头删除空格。trimLeft() 是此方法的别名。
+		// trimEnd() 方法从一个字符串的末端移除空白字符。trimRight() 是这个方法的别名。
+		
+		
+		{
+			let str = "   789456    ";
+			console.log(str);//   789456    
+			console.log(str.trim());//789456
+			console.log(str.trimLeft());//789456    
+			console.log(str.trimRight());//   789456    
+		}
+		
+		// 16.valueOf() 方法返回一个String对象的原始值（primitive value）
+		{
+			let str = "我系渣渣";
+			console.log(str.valueOf());//我系渣渣
+		}
+		
+		
+		var str = 'asdfssaaasasasasaa';
+		// var json = {};
+		// for (var i = 0; i < str.length; i++) {
+		//     if(!json[str.charAt(i)]){
+		//        json[str.charAt(i)] = 1;
+		//     }else{
+		//        json[str.charAt(i)]++;
+		//     }
+		// 	console.log(json)
+		// };
+		// var iMax = 0;
+		// var iIndex = '';
+		// for(var i in json){
+		// 	console.log(json[i]);
+		//     if(json[i]>iMax){
+		//          iMax = json[i];
+		//          iIndex = i;
+		//     }
+		// }        
+		// console.log('出现次数最多的是:'+iIndex+'出现'+iMax+'次');
+		
+		function strMaxNumStr(str){
+			let ojson = {};
+			for(let i = 0; i < str.length ; i++){
+				if(!ojson[str.charAt(i)]){
+					ojson[str.charAt(i)] = 1;
+				}else{
+					ojson[str.charAt(i)]++;
+				}
+			}
+			
+			let oMax = 0;
+			let oStr = "";
+			for(let i in ojson){
+				console.log(ojson[i],i,"==========")
+				if(ojson[i] > oMax){
+					oMax = ojson[i];
+					oStr = i;
+				}
+			}
+			return `${str}出现最多的是${oStr}字母;出现了${oMax}次。`;
+		}
+		
+		console.log(strMaxNumStr(str))
+		
+		
+	</script>
+</html>

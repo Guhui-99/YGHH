@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	{
+		// 1-20的偶数和
+		let total = 0;
+		let startnum = 0;
+		while(startnum <= 20){
+			if(startnum % 2 === 0)
+				total += startnum;
+				startnum++;
+		}
+		// console.log(total);
+		
+		do{
+			if(startnum % 2 === 0)
+			total += startnum;
+			startnum++;
+		}while(startnum <= 20)
+		
+		// console.log(total);
+	}
+	
+	{
+		// 输入月日  判断是2020年的第多少天
+		let month = 12;
+		let date = 31;
+		let aimdate = 0;
+		aimdate += date;
+		for(let i = 1; i < month; i++){
+			switch (i) {
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+					aimdate += 31;
+					break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					aimdate += 30;
+					break;
+				case 2:
+					aimdate += 29;
+					break;
+			}
+		}
+		console.log(aimdate)
+	}
+		
+		
+	</script>
+</html>

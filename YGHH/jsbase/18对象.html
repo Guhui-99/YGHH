@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj1 = {
+				name:"吴光辉",
+				age:"24",
+				sayhello: function sayhello(){
+					return this.name + "说" + "我" + this.age + "岁";
+				},//如果给一个对象添加方法属性，则属性名跟方法名要一致；
+				//省略属性名写法为:
+				eat(){
+					return this.name + "说吃饭了";
+				}
+			}
+			
+			var obj2 = {
+				name:"李坤",
+				age:"25"
+			}
+			
+			obj2.sayhello = obj1.sayhello;
+			
+			console.log(obj1.sayhello());
+			console.log(obj1.eat());
+			console.log(obj2.sayhello());
+			
+			var bb = 0;
+			function obj(){
+				var aaa = 0;
+				function hello(){
+					console.log(222)
+				}
+				hello();
+				return aaa;
+			}
+			// obj();
+			var ccc = obj();
+			console.log(ccc)
+			console.log(this);
+			
+			{
+				// 数组foreach底层
+				
+				var arr = [1,2,3];
+				// arr.forEach((item,i,obj)=>{
+				// 	console.log(item,i,obj)
+				// })
+				
+				Array.prototype.yghhEach = function(fn){
+					console.log(this);
+					for(let i = 0;i < this.length;i++){
+						fn(this[i],i,this);
+					}
+				}
+				arr.yghhEach(
+				function(item,i,obj){
+					console.log(item,i,obj)
+				});
+				
+				
+			}
+		</script>
+	</body>
+</html>

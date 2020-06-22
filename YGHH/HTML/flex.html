@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.main{
+				display: flex;
+				height: 50px;
+				width: 100%;
+			}
+			
+			.main div{
+				background: red;
+				flex:  1 1  80px;
+			}
+			
+			.main div:nth-child(2){
+				background: #008B8B;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		
+		<input type="text" name="" id="" value="" />
+	</body>
+	<script src="../daily/js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var a = 14 - true + [14,52] + "0";
+		console.log(a,typeof a);
+		
+		
+		
+		// strCharLen 判断字符串含多少个某字符
+		function strCharLen(string,code){
+			let len = 0;
+			for(let i = 0; i < string.length; i++)
+				if(string.charAt(i) === code) len++;
+			return len;
+		}
+		
+		console.log(strCharLen("44444.454.5.2.52.5.5","4"))
+		
+		$("input").keyup(function(){
+			var thisval = $(this).val();
+			console.log(thisval.repeat("."))
+			if(thisval.includes("+") || thisval.includes("-") || strCharLen(thisval,".")>1){
+				thisval = thisval.slice(0,thisval.length - 1);
+				 $(this).val(thisval);
+			}
+		})
+		
+	
+
+		
+		
+		
+		
+	</script>
+</html>

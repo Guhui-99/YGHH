@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function add(){
+			// 	let a = 0;
+			// 	a++;
+			// 	console.log(a);
+			// 	function sayname(){
+			// 		console.log("我是李坤");
+			// 	}
+			// 	sayname()
+			// }
+			// add();
+			// console.log(a);
+			// add();
+			// console.log(a)
+			
+			
+			var bbb = function(){
+				console.log(this);
+			}
+			
+			var obj = {
+				user:"吴光辉",
+				sayself(){
+					function add(){
+						console.log(8888)
+					}
+					return console.log(this.user);
+				}
+				
+			}
+			
+			bbb();
+			
+			obj.sayself()()
+			
+		</script>
+	</body>
+</html>

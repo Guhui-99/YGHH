@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="password" name="" id="" value="" /><br>
+		<input class="btn" type="button" name="" id="" value="按钮" />
+		<div class="test" style="background-color: red;color: white;height: 50px;display: inline-block;">
+			我系渣渣辉
+		</div>
+		
+		
+	</body>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		console.log($(":password"));//选择有属性值为password的元素
+		console.log(document.getElementsByTagName("*"));
+		$(".btn").click(function(){
+			$(".test").animate({width:"50px"});
+		})
+		{
+			var a = 1;
+			let b = 0;
+		}
+		
+		
+		
+		var arr = [1,1,1,1,22,2,2,2,2,88,889,888,88,88,99,99,99,44,44,55,66,55];
+		function unqie(arr){
+			return Array.from(new Set(arr))
+		}
+		
+		function upqie2(arr){
+			for(let i = 0;i < arr.length;i++){
+				for(var j = i + 1;j < arr.length; j++){
+					if(arr[i] === arr[j]){
+						arr.splice(j,1)
+						j--;
+					}
+				}
+			}
+			return arr;
+		}
+		
+		
+		console.log(unqie(arr));
+		console.log(upqie2(arr));
+		
+		a = 1;
+		console.log(a);
+		// console.log(b);
+		let b = 0;
+		console.log(b);
+		
+		var y = undefined;//0 null undefined false
+		var x = y ? 1 : 'a';
+		
+		console.log(x);
+		
+		console.log(1 + true);//2 布尔值跟数字相加减，布尔值会自动转换
+		console.log("1" + true);//"1true" //布尔值跟字符串相加得字符串
+		console.log("12" + 10);
+		console.log(10 + "11");//布尔值跟字符串相加得字符串
+		console.log('10' + Boolean(111));
+		console.log(10 + "11");
+		console.log([] == true);
+		console.log(![] == true);
+		console.log(![] + 1);//1
+		console.log([] + 1);//1
+		console.log([] == 1);//false 空数组([])跟数值运算都会自动转化为数值0
+		console.log(![] == 0);//ture
+		console.log(Boolean({}) == Boolean(""));//false 数组，对象(包括空数组，空对象)布尔转换都返回true
+		console.log(Boolean('abc'));
+		console.log([])
+		function test(){
+			var a = 100;
+			console.log(this);//this代表window对象
+			console.log(this.a);//如果未定义全局变量a,则为undefined
+		}
+		
+		test()
+		
+	</script>
+</html>
