@@ -1,0 +1,167 @@
+.page_top_box{
+	color: #fff;
+	background: linear-gradient(to right,#feab27,#feab27) left top no-repeat / 100% 3.8rem;
+	padding: .6rem .25rem 0 .25rem;
+}
+
+.duihuan_btn{
+	width: 1.5rem;
+	height: .55rem;
+	background: #ffffff;
+	color: #feab27;
+	border: none;
+	border-radius: .55rem;
+}
+
+.top_box_top_left div{
+	margin:  .15rem 0;
+}
+
+.top_box_top_left div span{
+	font-size: .78rem;
+}
+
+.top_box_top_left a{
+	color: #fff0d8;
+	margin-left: .1rem;
+}
+
+.qiandao_box{
+	background: white;
+	color: #999;
+	padding: .4rem .2rem;
+	border-radius: 8px;
+	margin-top: .5rem;
+}
+
+.qiandao_box p{
+	font-size: .24rem;
+}
+
+.qiandao_area{
+	padding: .2rem 0;
+	background: linear-gradient(to right,#f0ecf0,#f0ecf0) left .95rem no-repeat / 100% 2px;
+}
+
+.qiandao_item{
+	width: calc((100vw - 2rem) / 7);
+	text-align: center;
+	font-size: .2rem;
+	color: #feab27;
+}
+
+.qiandao_item div{
+	width: calc((100vw - 2rem) / 7);
+	height: calc((100vw - 2rem) / 7);
+	background: #f0ecf0;
+	border-radius: 50%;
+	margin-top: .1rem;
+	background: url(../img/qiandao_bg.png);
+	background-size: 100% 100%;
+}
+
+.qiandao_item div span{
+	display: none;
+	color: #333;
+	font-size: .24rem;
+}
+
+.qiandao_item_act{
+	color: #999 !important;
+}
+
+.qiandao_item_act div{
+	background: #f0ecf0 !important;
+}
+
+.qiandao_item_act div span{
+	display: block;
+}
+
+.qiandao_tips{
+	padding-top: .25rem;
+	color: ;
+	border-top: 1px solid #e0e0e0;
+}
+
+.qiandao_tips input{
+	width: 1.5rem;
+	height: .55rem;
+	background: #feab27;
+	border-radius: .55rem;
+	border: none;
+	color: white;
+}
+
+.tit_line{
+	width: calc(100% - .5rem);
+	margin: .4rem 0 .25rem .25rem;
+}
+
+.tit_left{
+	color: rgba(51,51,51,.4);
+	font-size: .24rem;
+}
+
+.tit_left span{
+	font-size: .36rem;
+	color: #333;
+}
+
+.tit_right{
+	color: rgba(51,51,51,.6);
+}
+
+.list_cont{
+	width: calc(100% - .5rem);
+	background: white;
+	overflow: hidden;
+	border-radius: 6px;
+	padding: .25rem .2rem;
+	margin: 0 0 0 .25rem;
+}
+
+.list_item .jifen span{
+	font-size: .34rem;
+}
+
+.item_tips{
+	font-size: .24rem;
+	display: flex;
+	color: #333;
+	margin: .1rem 0;
+}
+
+.list_item{
+	padding: .4rem 0 .25rem 0;
+}
+
+.list_item:nth-child(n + 2){
+	border-top: 1px solid #f2f2f2;
+}
+
+.list_item .item_tips svg{
+	width: .4rem;
+	height: .4rem;
+	background: linear-gradient(-53deg,#006aff,#00c6fa);
+	fill: #fff;
+	padding: .05rem;
+	border-radius: 4px;
+	margin-right: .1rem;
+}
+
+.list_item input[type=button]{
+	width: 1.2rem;
+	height: .5rem;
+	background: #feab27;
+	border: none;
+	font-size: .26rem;
+	color: white;
+	border-radius: 4px;
+}
+
+.tiem{
+	font-size: .2rem;
+	color: rgba(51,51,51,.4);
+	
+}

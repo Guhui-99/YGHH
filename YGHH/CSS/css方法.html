@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box" data-color="red">88888</div>
+		<div class="red" data-color="blue">88888</div>
+		<div class="box" data-color="yellow">88888</div>
+		<div class="yuan">
+			
+		</div>
+		
+	</body>
+	<style type="text/css">
+		.yuan{
+			width: 100px;
+			height: 100px;
+			background: circle(100px at 30% 50%);
+		}
+		
+		div:after{
+			content: attr(data-color);
+		}
+	</style>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="waves.min.css"/>
+		<script src="waves.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<style>
+		    #colored-button .btn { color: #fff; }
+		    #colored-button a, 
+		    #colored-button a:hover { background: #01BCFF; }
+		    #colored-button button,
+		    #colored-button button:hover { background: #1bb556; }
+		    #colored-button input,
+		    #colored-button input:hover { background: #ff4f0f; }
+		</style>
+		
+		<p class="text-center">
+		    <a class="flat-buttons">Button A</a>
+		    <button class="flat-buttons">Button B</button>
+		    <input class="flat-buttons" type="submit" value="Button C">
+		</p>
+		
+		<p id="colored-button" class="text-center">
+		    <a class="btn float-buttons">Button A</a>
+		    <button class="btn float-button-light">Button B</button>
+		    <input class="btn float-buttons" type="submit" value="Button C">
+		</p>
+		
+		<script type="text/javascript">
+			var config = {
+			    // How long Waves effect duration 
+			    // when it's clicked (in milliseconds)
+			    duration: 500,
+			
+			    // Delay showing Waves effect on touch
+			    // and hide the effect if user scrolls
+			    // (0 to disable delay) (in milliseconds)
+			    delay: 200
+			};
+			                
+			// Initialise Waves with the config
+			Waves.init(config);
+			
+			
+			
+			
+		    Waves.attach('.flat-buttons', ['waves-button']);
+		    Waves.attach('.float-buttons', ['waves-button', 'waves-float']);
+		    Waves.attach('.float-button-light', ['waves-button', 'waves-float', 'waves-light']);
+		</script>
+		
+	</body>
+</html>

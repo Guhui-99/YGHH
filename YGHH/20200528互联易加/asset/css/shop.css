@@ -1,0 +1,129 @@
+.page_top{
+	height: 4.2rem;
+	background: url(../img/shop_top_bg.png) left no-repeat / 100% auto,#fff;
+	padding: 1.1rem .25rem 0 .25rem;
+}
+
+.search_box>svg{
+	width: .4rem;
+	height: .4rem;
+	background: rgba(0,0,0,.5);
+	fill: white;
+	padding: .06rem;
+	border-radius: 50%;
+}
+
+.search_cont{
+	width: calc(100% - .6rem);
+	background: white;
+	padding: 0 .15rem;
+	border-radius: .6rem;
+	height: .8rem;
+}
+
+.search_cont svg{
+	width: .32rem;
+	height: .32rem;
+}
+
+.search_cont input{
+	margin-top: .1rem;
+	margin-left: .1rem;
+}
+
+.search_cont input::placeholder{
+	font-size: .32rem;
+}
+
+.icon_cont .icon_item{
+	width: 25%;
+	text-align: center;
+}
+
+.icon_cont .icon_item p{
+	margin-top: .05rem;
+}
+
+.icon_cont{
+	background: white;
+	padding: .3rem 0 .2rem 0;
+	color: #666;
+}
+
+.icon_cont .icon_item svg{
+	width: 1rem;
+	fill: #fff;
+	height: 1rem;
+	padding: .15rem;
+	border-radius: 50%;
+}
+
+.icon_cont .icon_item:nth-child(1) svg{
+	background: linear-gradient(45deg,#ff6c4b,#ff5440);
+}
+
+.icon_cont .icon_item:nth-child(2) svg{
+	background: linear-gradient(45deg,#ffd733,#ff9737);
+}
+
+.icon_cont .icon_item:nth-child(3) svg{
+	background: linear-gradient(45deg,#90f065,#2edb5c);
+}
+
+.icon_cont .icon_item:nth-child(4) svg{
+	background: linear-gradient(45deg,#82d6fe,#4db1ff);
+}
+
+.goods_item{
+	width: calc(100% - .5rem);
+	margin: .2rem 0 0 .25rem;
+	background: white;
+	border-radius: 6px;
+}
+
+.goods_item img{
+	width: 3.2rem;
+	height: 2.2rem;
+	margin-right: .2rem;
+	border-radius: 6px;
+}
+
+.item_top{
+	padding: .2rem;
+}
+
+.item_top .flex-star svg{
+	margin-right: .1rem;
+}
+
+.goods_intro{
+	flex-direction: column;
+	height: 2.2rem;
+	padding: .1rem 0;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.goods_intro button{
+	background: #feab27;
+	color: #fff;
+	border: none;
+	height: .5rem;
+	border-radius: 6px;
+}
+
+.goods_intro_cont{
+	padding: 0 .2rem .3rem .2rem;
+	font-size: .24rem;
+}
+
+.intro_line svg{
+	fill: #d6d6d6;
+	width: .28rem;
+	height: .28rem;
+	margin-right: .1rem;
+}
+
+.goods_tag{
+	background: url(../img/tag_goods_item.png) right bottom no-repeat / .7rem,#fff;
+}

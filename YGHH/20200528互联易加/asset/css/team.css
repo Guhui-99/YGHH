@@ -1,0 +1,80 @@
+.page_top{
+	width: 100%;
+	background:#feab27;
+	background-size: 100% 100%;
+	color: rgba(255,255,255,.4);
+	position: relative;
+	padding: .3rem .3rem;
+}
+
+.top_item{
+	width: calc(100% / 3);
+	text-align: center;
+}
+
+.top_item div{
+	color: #999;
+	font-size: .36rem;
+}
+
+.item_top img{
+	width: .6rem;
+	height: .6rem;
+	margin-right: .15rem;
+	border-radius: 50%;
+}
+
+.item_top{
+	padding: .2rem .3rem;
+}
+
+.team_item{
+	background: #fff;
+}
+
+.page_list .team_item:nth-child(n + 2){
+	margin-top: .1rem;
+}
+
+.item_top .strus{
+	color: #0f72e5;
+}
+
+.usre_name{
+	color: rgba(51,51,51,.8);
+}
+
+.item_bottom{
+	padding: .25rem .3rem;
+	border-top: 1px solid #e6e5e5;
+	color: #999;
+}
+
+.top_num_box{
+	background: white;
+	padding: .3rem 0;
+	color: #999999;
+	margin-bottom: .3rem;
+}
+
+.top_item p{
+	color: #333;
+}
+
+.user_name{
+	color: rgba(255,255,255,.75);
+}
+
+.user_name div{
+	color: #fff;
+	font-size: .48rem;
+}
+
+.code_box{
+	text-align: center;
+}
+
+.code_box img{
+	width: 2rem;
+	height: 2rem;
+}

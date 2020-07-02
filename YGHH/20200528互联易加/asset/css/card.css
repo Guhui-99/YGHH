@@ -1,0 +1,61 @@
+.care_item{
+	width: calc(100% - .5rem);
+	padding: .5rem .35rem;
+	background: url(../img/item_bg.png),url(../img/card_bg1.png),#16c72e;
+	background-size: 100% 100%;
+	border-radius: 6px;
+	margin: .25rem 0 0 .25rem;
+	color: #aaf2b4;
+}
+
+.item_box{
+	align-items: flex-end;
+}
+
+.item_box input{
+	width: 1.7rem;
+	height: .5rem;
+	background: #fff;
+	border: none;
+	border-radius: .5rem;
+	color: #16c72e;
+	font-weight: bold;
+}
+
+.item_price{
+	font-size: .36rem;
+	font-weight: bold;
+	color: white;
+}
+
+.item_price span{
+	font-size: .6rem;
+}
+
+.care_item2{
+	color: #ffe1b1;
+	background: url(../img/item_bg.png),url(../img/card_bg2.png),#fea517;
+	background-size: 100% 100%;
+}
+
+.care_item2 input{
+	color: #fea517;
+}
+
+.care_item3{
+	color: #ffa090;
+	background: url(../img/item_bg.png),url(../img/card_bg3.png),#ff3e1e;
+	background-size: 100% 100%;
+}
+
+.care_item3 input{
+	color: #ff3e1e;
+}
+
+.item_box .box_left span{
+	color: #fff6e8;
+}
+
+.item_box{
+	font-size: .24rem;
+}

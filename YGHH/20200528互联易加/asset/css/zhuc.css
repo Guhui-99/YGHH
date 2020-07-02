@@ -1,0 +1,65 @@
+.page_cont{
+	background: white;
+	width: calc(100% - .5rem);
+	margin: .25rem;
+	padding: 0 .3rem .3rem .3rem;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.line_box{
+	height: .7rem;
+	border-bottom: 1px solid #eee;
+	margin-top: .35rem;
+}
+
+.line_box .flex-star span{
+	display: inline-block;
+	width: 1.9rem;
+}
+
+.top_img{
+	width: 100%;
+}
+
+.img_ify img{
+	width: 2rem;
+	height: .55rem;
+	border-radius: 5px;
+}
+
+.bun_ify input[type=button]{
+	width: 2rem;
+	height: .55rem;
+	border: none;
+	color: white;
+	background: #feab27;
+	border-radius: 5px;
+}
+
+.line_box .flex-star input{
+	width: 2.3rem;
+}
+
+.line_box2{
+	padding: .3rem;
+	background: white;
+	margin: 0 .3rem;
+	border-radius: 5px;
+}
+
+.line_box2 span{
+	width: 1.9rem;
+	display: inline-block;
+}
+
+.btn_more{
+	padding: .2rem;
+	text-align: right;
+	color: #999;
+	padding-right: .4rem;
+}
+
+.btn_more a{
+	color: #333333;
+}

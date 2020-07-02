@@ -1,0 +1,162 @@
+.ui-pane .ui-content{
+	background-size: 100% 3.6rem;
+	padding-bottom: 2rem;
+}
+
+.page_box3{
+	margin-top: -1rem !important;
+}
+
+.fukuan{
+	height: 2.8rem;
+	background: #fbbf1c;
+	color: white;
+	padding: .6rem .25rem;
+}
+
+.fukuan div{
+	font-size: .36rem;
+}
+
+.page_box1{
+	width: calc(100% - .5rem);
+	margin: .2rem 0 0 .25rem;
+	background: white;
+	padding:  0 .25rem;
+	border-radius: 5px;
+}
+
+.add_btn{
+	color: #fbbf1c;
+	border: 1px solid #fbbf1c;
+	background: transparent;
+	border-radius: 4px;
+}
+
+.order_number{
+	padding: .2rem 0;
+	color: #999;
+}
+
+.goods_intro{
+	align-items: flex-start;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: .2rem 0;
+}
+
+.goods_intro div{
+	font-size: .32rem;
+	margin-top: .1rem;
+}
+
+.goods_intro img{
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: .15rem;
+}
+
+.order_more{
+	padding: .2rem 0;
+	flex-wrap: wrap;
+}
+
+.more_item{
+	width: 50%;
+}
+
+.more_item sapn{
+	color: #666;
+}
+
+.more_item div{
+	color: #999;
+}
+
+.p_info{
+	border-top: 1px solid #eee;
+	padding: .2rem 0;
+	color: #999;
+	font-size: .24rem;
+}
+
+.yue{
+	padding: .2rem 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	color: #999;
+}
+
+.yue>span{
+	color: #fbbf1c;
+}
+
+.pay_order{
+	padding: .15rem 0 0 0;
+	color: #999;
+}
+
+.page_box2{
+	padding-bottom: .2rem;
+}
+
+.page_box2 svg{
+	width: .4rem;
+	height: .4rem;
+	margin-right: .1rem;
+}
+
+.page_bottom{
+	height: .9rem;
+	border-radius: .9rem;
+	width: calc(100% - .7rem);
+	position: fixed;
+	bottom: .4rem;
+	color: white;
+	overflow: hidden;
+	left: .35rem;
+}
+
+.page_bottom .flex-between{
+	background: #191919;
+	height: .9rem;
+	padding: 0 .25rem;
+	width: calc(100% - 2rem);
+}
+
+.page_bottom>input{
+	height: .9rem;
+	width: 2rem;
+	background: #fbbf1c;
+	border: none;
+	
+}
+
+.modal{
+	background: #fff;
+	width: calc(100% - .6rem);
+	padding: .5rem .3rem;
+	border-radius: 6px;
+}
+
+.modal_line{
+	padding: .3rem .4rem;
+	border-bottom: 1px solid #eee;
+}
+
+.modal_line span{
+	display: inline-block;
+	width: 1.2rem;
+}
+
+.modal p{
+	color: #333;
+	margin-bottom: .2rem;
+	font-size: .32rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+.ui-shade{
+	display: none;
+}

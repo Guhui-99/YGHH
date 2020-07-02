@@ -1,0 +1,146 @@
+.ui-pane .ui-header{
+	background: #feab27;
+	box-shadow: none;
+}
+
+.header-title{
+	color: #fff;
+}
+
+.ui-pane .ui-content{
+	background: linear-gradient(0deg,#feab27,#feab27) left top no-repeat / 100% 1.75rem,#f2f2f2;
+	padding-bottom: 1.5rem;
+}
+
+.ui-header .header-button .icon {
+	fill: #fff;
+}
+
+.top_box{
+	width: calc(100% - .5rem);
+	margin: .25rem 0 0 .25rem;
+	background: white;
+	color: #666;
+	font-size: .24rem;
+	overflow: hidden;
+	border-radius: 6px;
+}
+
+.goods_tit{
+	padding: .3rem;
+	color: #333;
+	font-size: .32rem;
+}
+
+.goods_more{
+	flex-wrap: wrap;
+	padding: 0 .3rem;
+}
+
+.goods_more div{
+	width: 50%;
+}
+
+.goods_more div span{
+	color: #999;
+}
+
+.goods_tops{
+	padding: .25rem .3rem;
+	background: #fffaf2;
+	font-size: ;
+	margin-top: .2rem;
+	align-items: flex-start;
+}
+
+.goods_tops .flex-star{
+	width: 1.6rem;
+	color: #333;
+}
+
+.page_tit{
+	padding: .3rem .25rem;
+	background: white;
+	margin-top: .2rem;
+}
+
+.page_tit>span{
+	font-size: .32rem;
+	margin-right: .2rem;
+}
+
+.page_tit>div span{
+	color: #feab27;
+}
+
+.check_box,
+.link_line,
+.addLine{
+	padding: .3rem .25rem;
+	background: white;
+	margin-top: 1px;
+}
+
+.addLine input{
+	width: 1rem;
+	height: .45rem;
+	background: transparent;
+	border: 1px solid #feab27;
+	color: #333;
+}
+
+input[type=radio],
+input[type=checkbox]{
+	width: .28rem;
+	height: .28rem;
+}
+
+.check_item{
+	margin-left: .15rem;
+}
+
+
+.xieyi{
+	padding: .25rem;
+	color: #999;
+	font-size: .24rem;
+}
+
+.xieyi a{
+	color: #feab27;
+}
+
+.page_bottom{
+	width: 100%;
+	height: 1.2rem;
+	background: white;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	color: #999;
+	padding: 0 0 0 .25rem;
+}
+
+.bottom_left{
+	align-items: flex-end;
+}
+
+.bottom_left>span{
+	margin-bottom: .1rem;
+}
+
+.bottom_left div{
+	color: #ff0000;
+}
+
+.bottom_left div span{
+	font-size: .6rem;
+}
+
+.bottom_btn{
+	height: 1.2rem;
+	width: 2.2rem;
+	color: white;
+	border: none;
+	background: #feab27;
+}

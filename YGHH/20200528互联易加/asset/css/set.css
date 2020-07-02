@@ -1,0 +1,15 @@
+.page_list{
+	background: white;
+	padding: .2rem .3rem;
+}
+
+.head_img img{
+	width: 1.1rem;
+	height: 1.1rem;
+	border:2px solid #feab27;
+	border-radius: 50%;
+}
+
+.btn{
+	margin-top: 1rem;
+}

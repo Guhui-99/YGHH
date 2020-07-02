@@ -1,0 +1,60 @@
+.btn{
+	margin-top: 1rem;
+}
+
+.page_line{
+	padding: .2rem .25rem;
+	background: white;
+	margin-top: .1rem;
+}
+
+.page_line div{
+	width: 1.6rem;
+}
+
+.page_line input{
+	border: none;
+}
+
+.img_ify .flex-star,
+.btn_ify .flex-star{
+	width: calc(100% - 2rem);
+}
+
+.img_ify .flex-star div,
+.btn_ify .flex-star div{
+	width: 1.6rem;
+}
+
+.img_ify .flex-star input,
+.btn_ify .flex-star input{
+	width: 3rem;
+}
+
+
+
+.img_ify img,
+.btn_ify input[type=button]{
+	height: .55rem;
+	color: white;
+	border-radius: 5px;
+	background: #fbbf1c;
+}
+
+.up_img{
+	position: relative;
+}
+
+.up_img img{
+	width: 2rem;
+	height: 2rem;
+}
+
+.up_img input{
+	position: absolute;
+	top: .2rem;
+	left: 1.85rem;
+	height: 2rem;
+	width: 2rem;
+	opacity: 0;
+}

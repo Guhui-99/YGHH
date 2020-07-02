@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="asset/css/framework.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="asset/css/login.css"/>
+		<script src="asset/js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/changePX.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="ui-pane">
+			<div class="nav"></div>
+			<div class="ui-content">
+				<img class="page_logo" src="asset/img/login_logo.png" >
+				<div class="login_box flex-between">
+					<div class="flex-star">
+						<span>手机号</span>
+						<input class="user" type="text" name="" id="" placeholder="请输入手机号" />
+					</div>
+					<svg class="icon clearuser" aria-hidden="true">
+						<use xlink:href="#icon-cha"></use>
+					</svg>
+				</div>
+				<div class="login_box flex-between">
+					<div class="flex-star">
+						<span>密码</span>
+						<input class="userpwd" type="password" name="" id="" placeholder="请输入密码" />
+					</div>
+					<svg class="icon pwdlook" aria-hidden="true">
+						<use xlink:href="#icon-yanjing1"></use>
+					</svg>
+				</div>
+				
+				<div class="login_more flex-between">
+					<div class="flex-star">
+						<input type="checkbox" name="" id="" value="" />
+						<span>记住密码</span>
+					</div>
+					<a href="">忘记密码?</a>
+				</div>
+				
+				<input type="button" class="login_btn" name="" id="" value="登录" />
+				<div class="zhuc">
+					<a href="">注册</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		$(".userpwd,.user").keyup(function(){
+			if($(this).val()){
+				$(this).parents(".login_box").find("svg").css("display","block");
+			}else{
+				$(this).parents(".login_box").find("svg").css("display","none");
+			}
+		})
+		
+		$(".clearuser").click(function(){
+			$(".user").val("");
+			$(this).css("display","none");
+		})
+		
+		var flag = false;
+		$(".pwdlook").click(function(){
+			if(!flag){
+				$(this).find("use").attr("xlink:href","#icon-yanjing");
+				$(".userpwd").attr("type","text");
+				flag = true;
+			}else{
+				$(this).find("use").attr("xlink:href","#icon-yanjing1");
+				$(".userpwd").attr("type","password");
+				flag = false;
+			}
+			
+				
+		})
+		
+	</script>
+</html>

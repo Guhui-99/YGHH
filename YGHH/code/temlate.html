@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/template-web.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				padding: 100px;
+			}
+			
+			.specitem,
+			.spec_chose_box div,
+			.specitem_cont div{
+				padding: 4px 6px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				color: #333;
+				opacity: .5;
+				margin-right: 5px;
+			}
+			
+			.spec_cont,
+			.specitem_cont{
+				margin: 5px 0;
+			}
+			
+			.spec_item{
+				margin-left: 20px;
+			}
+			
+			.oot_box{
+				display: flex;
+			}
+			
+			.oot_box div{
+				padding: 5px 8px;
+				border: 1px solid #999;
+				color: #333;
+				margin-right: 5px;
+				border-radius: 5px;
+			}
+			
+			.hasGoods{
+				margin: 50px 0;
+			}
+			
+			.active{
+				opacity: 1;
+				color: red;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="oot_box">
+			<div>生成部分规格</div>
+			<div>增加一个规格</div>
+			<div>关闭规格</div>
+			<div>生成所有规格</div>
+		</div>
+		
+		
+		
+		<script id="sku" type="text/html">
+			{{each SKUInfo as spec i}}
+			<div class="spec_item">
+				<h1>{{spec.name}}</h1>
+				{{each spec.items as items j}}
+					<div>
+						{{items.name}}
+						<div class="specitem_cont" style="display: flex;">
+							{{each spec.items as items s}}
+							<div>{{items.name}}</div>
+							{{/each}}
+						</div>
+					</div>
+				{{/each}}
+			</div>
+			{{/each}}
+		</script>
+		<div class="sku_cont" style="display: flex;">
+		</div>
+		
+		<script id="hasGoods" type="text/html">
+			{{each priceInfo as spec s}}
+			<div class="goods_item" style="display: flex;">
+				{{each spec.difference as item i}}
+				<div class="hasitem" style="margin: 0 5px;">
+					<span class="hasitemval">{{item}}</span>
+					<div class="spec_cont" style="display: flex;">
+						{{each SKUInfo[i].items as specitem specindex}}
+						<div class="specitem" style="margin: 0 5px;" data-index={{specindex + 1}}>{{specitem.name}}</div>
+						{{/each}}
+					</div>
+				</div>
+				{{/each}}
+			</div>
+			{{/each}}
+		</script>
+		<div class="hasGoods">
+		</div>
+		
+		<script id="allspec" type="text/html">
+			{{each allspec as goodsitem}}
+			<div class="goods_item" style="display: flex;">
+				{{each goodsitem as spec s}}
+				<div style="margin: 0 5px;">
+				{{spec}}
+					<div class="spec_chose_box" style="display: flex;">
+					{{each SKUInfo[s].items as item i}}
+						<div>{{item.name}}</div>
+					{{/each}}
+					</div>
+				</div>
+				{{/each}}
+			</div>
+			{{/each}}
+		</script>
+		<div class="allspec">
+		</div>
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var ajax1 =  $.get("js/sku.json",function(data){
+			console.log(data);
+			// 
+			var specShose = template('sku', data);
+			$('.sku_cont').html(specShose);
+			
+			
+			// 生成已有商品
+			data.priceInfo.forEach(function(item,i){
+				item.difference = item.difference.split(";");
+			})
+			
+			var specShose = template('hasGoods', data);
+			$('.hasGoods').html(specShose);
+			
+			
+			// 生成所有规格商品
+			var allGoodsArr = [];
+			data.SKUInfo.forEach(function(item){
+				let itemArr = [];
+				item.items.forEach(function(item2){
+					itemArr.push(item2.name);
+				})
+				allGoodsArr.push(itemArr);
+			})
+			allGoodsArr = doExchange(allGoodsArr)
+			allGoodsArr = allGoodsArr.map(function(item){
+				return item.split(";")
+			})
+			data.allspec = allGoodsArr;
+			console.log(data);
+			
+			
+			var allspec = template('allspec', data);
+			$('.allspec').html(allspec);
+			
+			
+			
+			$(".hasGoods").on("click",".goods_item>div",function(){
+				var _thisindex = $(this).index();//规格下标，判断第几个规格
+				let n = calChoseActive(data.SKUInfo,_thisindex);//计算单规格下标
+				let thisVal = $(this).find("span.hasitemval").text();//获取当前规格
+				let nowarr = [];//装当前列已有规格
+				$(".goods_item>div.hasitem:nth-child("+ (_thisindex + 1) +")").each(function(){
+					nowarr.push($(this).find("span.hasitemval").text());
+				})
+				console.log(nowarr,"88888888");
+				
+				let hasarr = [];//统计所有已经存在的规格组合
+				$(".hasGoods .goods_item").each(function(){
+					let hasItemArr = [];
+					$(this).find(".hasitem").each(function(){
+						hasItemArr.push($(this).find(".hasitemval").text());
+					})
+					hasarr.push(hasItemArr.join());
+				})
+				
+				$("div.specitem").removeClass("active");
+				
+				let thisSpecArr = [];//当前行的规格组合
+				$(this).parents(".goods_item").find(".hasitem").each(function(){
+					thisSpecArr.push($(this).find(".hasitemval").text());
+				})
+				
+				let _thisIndex = $(this).index();
+				
+				$(this).find("div.specitem").each(function(){
+					var len = calStrLen(nowarr,$(this).text());//计算当前单规格长度
+					let specIndex = $(this).index();
+					let thisval = $(this).text();
+					thisSpecArr.splice(_thisIndex,1,thisval);
+					console.log(hasarr,thisSpecArr.join(),hasarr.indexOf(thisSpecArr.join()));
+					
+					if(len < n && hasarr.indexOf(thisSpecArr.join()) == -1){//判断单规格存在长度是否小于所有规格组合后的长度，并且，该行组合规格是否存在（重点）
+						$(this).addClass("active");
+					}else{
+						$(this).removeClass("active");
+					}
+				})
+			})
+			
+			$(".hasGoods").on("click",".specitem.active",function(){
+				$(this).parents(".hasitem").find(".hasitemval").text($(this).text());
+			})
+		})
+		
+		
+		function doExchange(arr) {
+			var len = arr.length;
+			// 当数组大于等于2个的时候
+			if(len >= 2) {
+				// 第一个数组的长度
+				var len1 = arr[0].length;
+				// 第二个数组的长度
+				var len2 = arr[1].length;
+				// 2个数组产生的组合数
+				var lenBoth = len1 * len2;
+				//  申明一个新数组,做数据暂存
+				var items = new Array(lenBoth);
+				// 申明新数组的索引
+				var index = 0;
+				// 2层嵌套循环,将组合放到新数组中
+				for(var i = 0; i < len1; i++) {
+					for(var j = 0; j < len2; j++) {
+						items[index] = arr[0][i] + ";" + arr[1][j];
+						index++;
+					}
+				}
+				// 将新组合的数组并到原数组中
+				var newArr = new Array(len - 1);
+				for(var i = 2; i < arr.length; i++) {
+					newArr[i - 1] = arr[i];
+				}
+				newArr[0] = items;
+				// 执行回调
+				return doExchange(newArr);
+			} else {
+				return arr[0];
+			}
+		}
+		
+		
+		function calChoseActive(obj,index){
+			let resnum = 1;
+			obj.forEach(function(item,i){
+				if(index != i){
+					resnum *= item.items.length;
+				}
+			})
+			return resnum;
+		}
+		
+		function calStrLen(arr,str){
+			let len = 0;
+			arr.forEach(item=>{
+				item == str ? len++ : len;
+			})
+			return len;
+		}
+		
+		
+		
+		
+		$.when(ajax1).done(()=>{
+			$(".specitem_cont div").click(function(){
+			})
+		})
+	</script>
+</html>

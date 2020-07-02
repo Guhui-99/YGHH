@@ -1,0 +1,73 @@
+.page_lsit{
+	padding: .3rem .25rem;
+	flex-wrap: wrap;
+}
+
+.page_item{
+	width: calc((100% - .2rem) / 2);
+	height: 4.5rem;
+	border-radius: 5px;
+	background: red;
+	background: url(../img/goods_img.png) -2rem 0 no-repeat;
+	background-size: auto 100%;
+	overflow: hidden;
+	position: relative;
+	color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	padding: .75rem 0 0 .28rem;
+}
+
+.page_item img{
+	filter: blur(.05rem);
+	height: 100%;
+	position: absolute;
+	left: -2rem;
+	top: 0;
+}
+
+.page_item::before{
+	content: "";
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 100%;
+	position: absolute;
+	background: rgba(0,0,0,.3);
+	z-index: 1;
+}
+
+.page_lsit .page_item:nth-child(1){
+	text-align: center;
+	padding-top: 22%;
+}
+
+.page_lsit .page_item:nth-child(1) svg{
+	fill: #fff;
+	width: .6rem;
+	height: .6rem;
+	position: relative;
+	z-index: 2;
+	margin-bottom: .15rem;
+}
+
+.page_lsit .page_item:nth-child(2n){
+	margin-left: .2rem;
+}
+
+.page_lsit .page_item:nth-child(n + 3){
+	margin-top: .2rem;
+}
+
+.page_item div{
+	font-size: .32rem;
+	position: relative;
+	z-index: 2;
+}
+
+.page_item p{
+	z-index: 2;
+	position: relative;
+	font-size: .2rem;
+	color: rgba(255,255,255,.7);
+	margin-top: .3rem;
+}

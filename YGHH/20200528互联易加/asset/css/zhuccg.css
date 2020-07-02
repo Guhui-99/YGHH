@@ -1,0 +1,18 @@
+.gou{
+	width: 1.9rem;
+	height: 1.9rem;
+	margin: 1rem 0 0 0;
+}
+
+.ui-content{
+	text-align: center;
+}
+
+.ui-content div{
+	font-size: .48rem;
+	margin: 1rem 0  .4rem 0;
+}
+
+.btn{
+	margin-top: 1rem;
+}

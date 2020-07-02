@@ -1,0 +1,33 @@
+.page_item{
+	width: calc(100% - .5rem);
+	margin: .2rem 0 0 .25rem;
+	background: linear-gradient(to right,#feab27,#feab27) no-repeat,white;
+	background-size: .15rem 100%;
+	padding: .4rem;
+	border-radius: 6px;
+	position: relative;
+	overflow: hidden;
+}
+
+.item_left div{
+	color: #333333;
+	font-size: .32rem;
+}
+
+.item_left p{
+	margin-top: .2rem;
+	color: #999;
+}
+
+.num_box{
+	position: absolute;
+	right: 0;
+	height: .6rem;
+	width: 2.8rem;
+	text-align: center;
+	top: 0;
+	background: url(../img/item_img_bg.png);
+	background-size: 100% 100%;
+	line-height: .6rem;
+	color: white;
+}

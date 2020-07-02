@@ -1,0 +1,23 @@
+.head_img_box{
+	margin: .1rem 0 1rem 0;
+	background: white;
+	padding: .3rem 0;
+	position: relative;
+	text-align: center;
+}
+
+.head_img_box img{
+	width: 4.4rem;
+	height: 4.4rem;
+	border: 2px solid #feab27;
+	border-radius: 50%;
+}
+
+.head_img_box input{
+	position: absolute;
+	width: 4.4rem;
+	height: 4.4rem;
+	left: calc(50% - 2.2rem);
+	top: .3rem;
+	opacity: 0;
+}

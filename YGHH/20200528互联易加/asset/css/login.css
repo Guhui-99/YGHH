@@ -1,0 +1,67 @@
+.ui-pane .ui-content{
+	background: #fff;
+}
+
+.page_logo{
+	width: 1.5rem;
+	margin: 1rem 0 1.8rem calc(50% - .75rem);
+}
+
+.login_box{
+	padding: .3rem;
+	border: 1px solid #d6d6d6;
+	width: calc(100% - .6rem);
+	border-radius: 5px;
+	margin: .4rem 0 0 .3rem;
+}
+
+.login_box .flex-star{
+	width: calc(100% - .5rem);
+}
+
+.login_box .flex-star span{
+	display: inline-block;
+	width: 1.4rem;
+}
+
+.login_box svg{
+	width: .4rem;
+	height: .4rem;
+	fill: #feab27;
+	display: none;
+}
+
+.login_box input{
+	width: calc(100% - 2rem);
+}
+
+.login_more{
+	margin: .3rem .4rem 0 .4rem;
+	
+}
+
+.login_btn{
+	width: calc(100% - .6rem);
+	height: .9rem;
+	background: #feab27;
+	border: none;
+	border-radius: 5px;
+	margin: .75rem 0 0 .3rem;
+	color: white;
+	font-size: .34rem;
+}
+
+.zhuc{
+	text-align: center;
+	padding: .3rem 0;
+	font-size: .34rem;
+}
+
+.zhuc a{
+	color: #999;
+}
+
+input[type=checkbox]{
+	width: .32rem;
+	height: .32rem;
+}

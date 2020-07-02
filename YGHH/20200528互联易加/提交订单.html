@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="asset/css/framework.css" />
+		<link rel="stylesheet" type="text/css" href="asset/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="asset/css/tijiaodingd.css"/>
+		<script src="asset/js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/changePX.js" type="text/javascript" charset="utf-8"></script>
+		<script src="asset/js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="ui-pane">
+			<div class="nav"></div>
+			<div class="ui-header">
+				<a href="" class="header-button">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-left"></use>
+					</svg>
+				</a>
+				<div class="header-title">提交订单</div>
+			</div>
+			<div class="ui-content">
+				<div class="fukuan">
+					<div>代付款</div>
+					<p>实付金额：￥1000</p>
+				</div>
+				<div class="page_box1 page_box3">
+					<div class="order_number">
+						订单号：4689416313946
+					</div>
+					<div class="goods_intro flex-star">
+						<img src="asset/img/code.png" >
+						<div>重庆巫山神女天路+奉节白帝城 镇三日游[重庆周边三日游]</div>
+					</div>
+					<div class="order_more flex-star">
+						<div class="more_item flex-star">
+							<span>使用日期：</span>
+							<div>2020-06-07</div>
+						</div>
+						<div class="more_item flex-star">
+							<span>使用日期：</span>
+							<div>2020-06-07</div>
+						</div>
+						<div class="more_item marginTen flex-star">
+							<span>使用日期：</span>
+							<div>2020-06-07</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="page_box1">
+					<div class="order_number flex-between">
+						<span>出行人信息</span>
+						<input type="button" class="add_btn" name="" id="" value="+新增" />
+					</div>
+					<div class="p_info flex-between">
+						<div>
+							<div>王景萩</div>
+							<div>身份证5**************9</div>
+							<div>票号24655111</div>
+						</div>
+						<span>删除</span>
+					</div>
+					<div class="p_info flex-between">
+						<div>
+							<div>王景萩</div>
+							<div>身份证5**************9</div>
+							<div>票号24655111</div>
+						</div>
+						<span>删除</span>
+					</div>
+					<div class="p_info flex-between">
+						<div>
+							<div>王景萩</div>
+							<div>身份证5**************9</div>
+							<div>票号24655111</div>
+						</div>
+						<span>删除</span>
+					</div>
+				</div>
+				
+				<div class="page_box1">
+					<div class="order_number">
+						联系人
+					</div>
+					<div class="p_info">
+						<div>王景萩</div>
+						<div>票号24655111</div>
+					</div>
+				</div>
+				
+				<div class="page_box1 page_box2">
+					<div class="order_number">
+						选择支付方式
+					</div>
+					<div class="flex-between yue">
+						<div class="flex-star">
+							<input type="checkbox" name="" id="" value="" />
+							<div class="flex-star">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-yue"></use>
+								</svg>
+								<span>使用余额</span>
+							</div>
+						</div>
+						<span>-￥100</span>
+					</div>
+					<div class="flex-between pay_order">
+						<div class="flex-star">
+							<input type="radio" name="checkpay" id="" value="" />
+							<div class="flex-star">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-weixin1"></use>
+								</svg>
+								<span>微信号：WJQ15310281858</span>
+							</div>
+						</div>
+					</div>
+					<div class="flex-between pay_order">
+						<div class="flex-star">
+							<input type="radio" name="checkpay" id="" value="" />
+							<div class="flex-star">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-zhifubao1"></use>
+								</svg>
+								<span>支付宝：WJQ15310281858</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="page_bottom flex-between">
+					<div class="flex-between">
+						<div>已优惠￥100</div>
+						<div>合计￥900</div>
+					</div>
+					<input type="button" value="提交订单" />
+				</div>
+				
+				<div class="ui-shade flex-center">
+					<div class="modal">
+						<p>新增出行人</p>
+						<div class="modal_line flex-star">
+							<span>姓名</span>
+							<input type="text" name="" id="" placeholder="出行人姓名" />
+						</div>
+						<div class="modal_line flex-star">
+							<span>姓名</span>
+							<input type="text" name="" id="" placeholder="出行人姓名" />
+						</div>
+						<div class="modal_line flex-star">
+							<span>姓名</span>
+							<input type="text" name="" id="" placeholder="出行人姓名" />
+						</div>
+						<input type="button" class="btn" name="" id="" value="保存" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".modal").click(function(e){
+			var ev = e || event;
+			ev.stopPropagation();
+		})
+		
+		$(".add_btn").click(function(){
+			$(".ui-shade").css("display","flex");
+		})
+		
+		$(".btn").click(function(){
+			$(".ui-shade").css("display","none");
+		})
+		
+	</script>
+</html>

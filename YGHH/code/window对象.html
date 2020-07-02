@@ -6,4 +6,32 @@
 	</head>
 	<body>
 	</body>
+	<script type="text/javascript">
+		function C() {}
+		function D() {}
+		
+		let o = new C()
+		
+		// // true, because: Object.getPrototypeOf(o) === C.prototype
+		// o instanceof C
+		
+		// // false, because D.prototype is nowhere in o's prototype chain
+		// o instanceof D
+		
+		let c = 10;
+		let arr = [];
+		// while(c--){
+		// 	arr.push(c);
+		// }
+		// console.log(arr);
+		
+		do{
+			arr.push(c);
+		}while(c--);
+		
+		
+		
+		
+		
+	</script>
 </html>
